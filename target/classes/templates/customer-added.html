@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Customer Onboarding</title>
+</head>
+<body>
+<p> Customer added, Savings and Current account created successfully</p>
+
+	<p>customerId : <span th:text="${customerDetail.customerID}"> </span></p>
+	
+	<!-- <p>Account Number : <span th:text="${amountDetails.accountNumber}"></span></p>
+	
+	<p>Amount Required : <span th:text="${amountDetails.amount}"></span></p> -->
+	
+	<a href="home" class="btn btn-default">Back</a>
+
+</body>
+</html>

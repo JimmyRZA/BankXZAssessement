@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Perform Transfer</title>
+</head>
+
+<body>
+	<h4>Enter credit or debit details</h4>
+
+	<div class="container">
+		<form action="/transactional/performDebitOrCredit" th:object="${currentAccountDetail}" method="POST">
+		 <p>Customer ID: <span th:text="${currentAccountDetail.customerID}"></span>
+		<p>
+		<p>
+		<input type="text" placeholder="Customer ID:" th:field="${currentAccountDetail.customerID}"  th:value="${currentAccountDetail.customerID}"/>
+		</p>
+		<p>Debit Or Credit Amount, negative value for debit or positive value for credit:</p>
+		<p>
+		<input type="text" placeholder="Debit or Credit Amount" th:field="${currentAccountDetail.intransferamount}"  th:value="0"/>
+		</p>
+		<p>Target Account number:</p>
+		<p>AccountType:</p>
+		<p>
+		<input type="text" placeholder="AccountType" th:field="${currentAccountDetail.accountType}"  th:value="0"/>
+		</p>
+		<p>BankName:</p>
+		<p>
+		<input type="text" placeholder="BankName" th:field="${currentAccountDetail.bankName}"  th:value="0"/>
+		</p>
+		<p>BranchCode:</p>
+		<p>
+		<input type="text" placeholder="BranchCode" th:field="${currentAccountDetail.branchCode}"  th:value="0"/>
+		</p>
+		
+		<button type="submit">Submit</button>
+		
+		</form>
+	</div>
+	
+</body>
+
+</html>

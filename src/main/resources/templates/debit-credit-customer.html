@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Current Account</title>
+</head>
+
+<body>
+	<h4>Enter customerID to a debit or credit a customer</h4>
+
+	<div class="container">
+		<form action="/transactional/doDebitOrCredit" th:object="${currentAccountDetail}" method="POST">
+		
+		<p>
+		<input type="text" placeholder="Customer ID" th:field="${currentAccountDetail.customerID}"  th:value="0"/>
+		</p>
+		
+		<button type="submit">Submit</button>
+		
+		</form>
+	</div>
+	
+</body>
+
+</html>

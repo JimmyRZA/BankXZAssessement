@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Draw From Account</title>
+</head>
+
+<body>
+	<h4>Add a new customer</h4>
+
+	<div class="container">
+		<form action="/transactional/doAddCustomer" th:object="${customerDetail}" method="POST">
+		
+		<p>
+		<input type="text" placeholder="Customer Name" th:field="${customerDetail.name}"  th:value="0"/>
+		</p>
+		<p>
+		<input type="text" placeholder="Customer Surname" th:field="${customerDetail.surname}"  th:value="0"/>
+		</p>
+		<p>
+		<input type="text" placeholder="Cellphone" th:field="${customerDetail.cellphone}"  th:value="0"/>
+		</p>
+		<p>
+		<p>Id number:</p>
+		<input type="text" placeholder="ID Number" th:field="${customerDetail.idNumber}"  th:value="0"/>
+		</p>
+		<p>
+		<input type="text" placeholder="Customer Address" th:field="${customerDetail.address}"  th:value="0"/>
+		</p>
+		<p>
+		<input type="text" placeholder="Gender" th:field="${customerDetail.gender}"  th:value="0"/>
+		</p>
+		
+		<button type="submit">Submit</button>
+		
+		</form>
+	</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Aggregate Report</title>
+</head>
+<body>
+	<div class="container">
+		<form action="/reports/aggregate-financials-report" method="POST">
+			<p>Please select type of report to be generated, for
+				Transactional Accounts:</p>
+			<input type="radio" id="male" name="type" value="pdf"> <label
+				for="male">PDF</label><br> <input type="radio" id="female"
+				name="type" value="csv"> <label for="female">CSV</label><br>
+			<input type="radio" id="other" name="type" value="xlsx"> <label
+				for="other">XLSX</label>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+	<div>
+	<a href="/reports/home" class="btn btn-default">Back</a>
+	</div>
+</body>
+</html>

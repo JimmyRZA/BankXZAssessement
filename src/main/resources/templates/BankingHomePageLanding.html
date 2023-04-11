@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+</head>
+<body>
+	<h2>Welcome to the Bank OnBoarding System</h2>
+
+	<p>To add a new Customer, click here : <a th:href="@{/transactional/addCustomer}">Add a new Customer</a></p>
+	
+	<p>To perform a transfer, click here: <a th:href="@{/transactional/transfer}">Perform a transfer</a></p>
+	
+	<p>To debit or Credit a customer: <a th:href="@{/transactional/debitorcredit}">Debit or Credit a customer</a></p>
+	
+	<!-- <p>To get Aggregate Reports click here: <a th:href="@{/reports/aggregatereport}">Aggregate Report</a></p> -->
+	
+</body>
+</html>
